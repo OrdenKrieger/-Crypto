@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Crypto.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="Crypto.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Crypto" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="Crypto" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="Crypto.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -13,8 +14,7 @@
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-        <!--
-          UAC-Manifestoptionen
+        <!-- UAC-Manifestoptionen
           Wenn Sie die Zugangsebene für das Windows-Benutzerkonto ändern möchten, ersetzen Sie den 
           requestedExecutionLevel-Knoten durch eines der folgenden Elemente.
 
@@ -22,9 +22,10 @@
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Löschen Sie den requestedExecutionLevel-Knoten, wenn Sie 
-         zum Gewährleisten der Abwärtskompatibilität die Datei- und Registrierungsvirtualisierung verwenden möchten.
-    -->
+            Durch Angeben des requestedExecutionLevel-Knotens wird die Datei- und Registrierungsvirtualisierung deaktiviert.
+            Wenn Sie Datei- und Registrierungsvirtualisierung für Abwärts- 
+            kompatibilität verwenden möchten, löschen Sie den requestedExecutionLevel-Knoten.
+        -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
     </security>
@@ -42,15 +43,40 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Crypto.exe" size="24576">
-      <assemblyIdentity name="Crypto" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Crypto.exe" size="291768">
+      <assemblyIdentity name="Crypto" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>lJM2hNxE5Gs+lwEusQcT35AbpmA=</dsig:DigestValue>
+        <dsig:DigestValue>XZleW6EjqxiMtYwiBmv8e7a3daU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Icon.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>eo8w5T0Qle/mUq2GnFu9/PYb+/Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icon_t.ico" size="270398">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DF3EN1kgKi4oVAlA5Po73wjRgEk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Eine Liste aller Windows-Versionen, mit denen die Anwendung kompatibel ist. Windows wählt automatisch die am stärksten kompatible Umgebung aus.-->
+      <!-- Wenn die Anwendung mit Windows 7 kompatibel ist, heben Sie die Kommentierung des folgenden supportedOS-Knotens auf.-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
 </asmv1:assembly>
